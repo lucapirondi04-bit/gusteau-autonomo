@@ -42,49 +42,30 @@
             <div class="about-image-placeholder"></div>
         </div>
     </section>
-    <section id="menu" class="menu-section">
-        <div class="container">
-            <h3>Il Nostro Menù</h3>
-            
+<section id="menu" class="menu-section">
+    <div class="container">
+        <h3>Il Nostro Menù</h3>
+        
+        {{ with .Site.Data.settings.pizza_menu }}
+        
+            {{ range . }}
             <div class="menu-category">
-                <h4>Le Nostre Specialità</h4>
+                <h4>{{ .category_name }}</h4>
+                
+                {{ range .items }}
                 <div class="menu-item">
-                    <span class="item-name">Stella del Giorno</span>
-                    <span class="item-price">12€</span>
-                    <p class="item-description">Polpo fritto, insalata fresca, pomodorini e basilico.</p>
+                    <span class="item-name">{{ .item_name }}</span>
+                    <span class="item-price">{{ .item_price }}</span>
+                    <p class="item-description">{{ .item_description }}</p>
                 </div>
-                <div class="menu-item">
-                    <span class="item-name">Tonarella</span>
-                    <span class="item-price">11€</span>
-                    <p class="item-description">Pizze di latte fritte, rucola, pomodorini, mozzarella, salsa verde, mandorle tostate.</p>
-                </div>
-                <div class="menu-item">
-                    <span class="item-name">Canarre</span>
-                    <span class="item-price">13€</span>
-                    <p class="item-description">Mix di mare, salmone affumicato, gamberetti, tonno fresco, calamari e polpo, salsa rosa.</p>
-                </div>
-            </div>
+                {{ end }}
 
-            <div class="menu-category">
-                <h4>Le Pizze Classiche</h4>
-                <div class="menu-item">
-                    <span class="item-name">Margherita</span>
-                    <span class="item-price">8€</span>
-                    <p class="item-description">Pomodoro, mozzarella, basilico fresco.</p>
-                </div>
-                <div class="menu-item">
-                    <span class="item-name">Diavola</span>
-                    <span class="item-price">9€</span>
-                    <p class="item-description">Pomodoro, mozzarella, salame piccante.</p>
-                </div>
-                <div class="menu-item">
-                    <span class="item-name">Quattro Stagioni</span>
-                    <span class="item-price">10€</span>
-                    <p class="item-description">Pomodoro, mozzarella, funghi, prosciutto, olive, carciofini.</p>
-                </div>
             </div>
-            </div>
-    </section>
+            {{ end }}
+        
+        {{ end }}
+    </div>
+</section>
 
    <section id="contatti" class="contact-section">
     <div class="container">
@@ -95,7 +76,7 @@
         <p><strong>Telefono:</strong> <a href="tel:{{ .phone }}">{{ .phone }}</a></p>
         {{ end }}
         
-        <p><strong>Email:</strong> <a href="mailto:info@gusteau.it">info@gusteau.it</a></p>
+        <p><strong>Email:</strong> <a href="mailto:{{ .Site.Data.settings.public_email }}">{{ .Site.Data.settings.public_email }}</a></p>
         <p><strong>Orari:</strong></p>
         <ul>
             <li>Lunedì - Sabato: 19:00 - 23:00</li>

@@ -43,6 +43,33 @@ collections:
             widget: "string"
             default: "+39 070 1234567"
 
+# NUOVO CAMPO MAIL
+          - label: "Indirizzo Email Pubblico"
+            name: "public_email"
+            widget: "string"
+            default: "info@gusteau.it" # Email di default
+            
+# --- NUOVO CAMPO MENU DINAMICO ---
+          - label: "Menu Pizze"
+            name: "pizza_menu"
+            widget: "list" 
+            fields:
+              - label: "Nome Categoria (Classiche, Nostre Specialità)"
+                name: "category_name"
+                widget: "string"
+              - label: "Piatti nella Categoria"
+                name: "items"
+                widget: "list" 
+                fields:
+                  - label: "Nome Piatto"
+                    name: "item_name"
+                    widget: "string"
+                  - label: "Descrizione/Ingredienti"
+                    name: "item_description"
+                    widget: "text"
+                  - label: "Prezzo"
+                    name: "item_price"
+                    widget: "string"
           # NUOVO CAMPO FOOTER
           - label: "Testo Footer (Copyright)"
             name: "footer_text"
