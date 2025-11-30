@@ -1,9 +1,37 @@
 {
   "site_title": "Gusteau Pizzeria",
+  "public_email": "LucaPizza@gigiriva.com",
   "about_content": "Aperto oggi il sito, un domani apriremo anche il punto vendita",
-  "address": "Via Roma, 123, Cagliari",
-  "phone": "+39 3336663331",
   "homepage_title": "Benvenuti da LucaPizza",
   "homepage_subtitle": "La pizzeria che porta pizze al tavolo",
-  "footer_text": "tutti i diritti riservati a LucaPizza, non permettetevi a rubarli"
+  "phone": "+39 1234567890",
+  "footer_text": "tutti i diritti riservati a LucaPizza, non permettetevi a rubarli",
+  "address": "Via Roma, 123, Cagliari",
+  "pizza_menu": [
+    {
+      "category_name": "CLASSICHE",
+      "items": [
+        {
+          "item_name": "Margherita",
+          "item_description": "Sugo, mozzarella, basilico",
+          "item_price": "6"
+        },
+        {
+          "item_name": "Napoli",
+          "item_description": "Sugo, alici, capperi",
+          "item_price": "8"
+        }
+      ]
+    },
+    {
+      "category_name": "SPECIALITÀ",
+      "items": [
+        {
+          "item_name": "LucaPizza",
+          "item_description": "Sugo, mozzarella AD, pepe nero del Sudan, guanciale stagionato, patate boliviane al forno",
+          "item_price": "15"
+        }
+      ]
+    }
+  ]
 }
