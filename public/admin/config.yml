@@ -1,0 +1,40 @@
+backend:
+  name: git-gateway
+  branch: main # Utilizzeremo il branch 'main' per la pubblicazione su Netlify
+
+publish_mode: editorial_workflow # Permette di approvare le modifiche prima di pubblicare
+media_folder: "static/images" # Dove verranno caricate le nuove immagini
+public_folder: "/images" # Il percorso per le immagini nel sito finale
+
+collections:
+  - name: "configurazione"
+    label: "Configurazione Generale"
+    files:
+      - label: "Homepage e Contatti"
+        name: "settings"
+        file: "data/settings.json" # Dove Hugo troverà i dati
+
+        fields:
+          # CAMPO TITOLO DEL SITO
+          - label: "Titolo Principale"
+            name: "site_title"
+            widget: "string"
+            default: "Gusteau Pizzeria"
+            hint: "Il titolo che appare nella scheda del browser"
+
+          # CAMPO SEZIONE CHI SIAMO
+          - label: "Storia e Missione"
+            name: "about_content"
+            widget: "markdown" # Permette al ristoratore di usare grassetto e liste
+            default: "Siamo una pizzeria nata dalla passione... (TESTO ESEMPIO)"
+            hint: "Il testo che descrive il locale nella sezione Chi Siamo."
+
+          # CAMPO CONTATTI
+          - label: "Indirizzo Fisico"
+            name: "address"
+            widget: "string"
+            default: "Via Roma, 123, Cagliari"
+          - label: "Numero di Telefono"
+            name: "phone"
+            widget: "string"
+            default: "+39 070 1234567"

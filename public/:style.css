@@ -1,0 +1,357 @@
+/* Colori e Font Basati sul Menù di Gusteau */
+:root {
+    --primary-red: #E74C3C; /* Simile alla stella marina */
+    --accent-green: #27AE60; /* Simile al verde nell'Image 2 */
+    --text-dark: #333;
+    --text-light: #666;
+    --bg-light: #f9f9f9;
+    --bg-white: #ffffff;
+    --border-color: #eee;
+
+    --font-heading: 'Dancing Script', cursive;
+    --font-body: 'Montserrat', sans-serif; /* Usiamo Montserrat per semplicità e modernità */
+}
+.header-logo {
+    max-height: 100px; /* Regola l'altezza desiderata per il logo */
+    width: auto;
+    vertical-align: middle; /* Allinea l'immagine al centro verticalmente */
+}
+
+/* Stili Base */
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--text-dark);
+    line-height: 1.2;
+}
+
+a {
+    color: var(--primary-red);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background: var(--bg-white);
+    color: var(--text-dark);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+header .logo {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--primary-red);
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav a {
+    color: var(--text-dark);
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--primary-red);
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/pizza-hero.jpeg') no-repeat center center/cover; 
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h2 {
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: var(--primary-red);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #c0392b; /* Tonalità più scura del rosso */
+    text-decoration: none;
+}
+
+/* Sezione Chi Siamo */
+.about-section {
+    padding: 60px 0;
+    background-color: var(--bg-white); /* Sfondo bianco per staccare */
+    text-align: center;
+}
+
+.about-section h3 {
+    font-size: 2.2em;
+    color: var(--text-dark); /* Marrone scuro */
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.about-section h3::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-red); /* Sottolineatura rossa di accento */
+    margin: 10px auto 0;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+/* Stile per il placeholder delle immagini (lo sfondo o il collage) */
+.about-image-placeholder {
+    height: 350px; /* Aumentiamo leggermente l'altezza per mostrare più immagine */
+    margin-top: 20px;
+    background-image: url('./images/interno-locale-pizzeria.jpeg'); /* IL TUO COLLEGAMENTO ALL'IMMAGINE */
+    background-size: cover;       /* L'immagine coprirà tutto lo spazio */
+    background-position: center;  /* L'immagine sarà centrata */
+    background-repeat: no-repeat; /* Evita che l'immagine si ripeta */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Aggiunge una leggera ombra per farla risaltare */
+}
+
+/* Media Query (Assicurati che sia responsive) */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 40px 0;
+    }
+    .about-section h3 {
+        font-size: 2em;
+    }
+}
+
+/* Menu Section */
+.menu-section {
+    padding: 40px 0;
+    background: var(--bg-white);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.menu-section h3 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: var(--primary-red);
+}
+
+.menu-category {
+    margin-bottom: 30px;
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.menu-category h4 {
+    color: var(--accent-green);
+    font-size: 1.8em;
+    border-bottom: 2px solid var(--primary-red);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between; /* Questo sposta il prezzo a destra */
+    align-items: baseline;
+    padding: 10px 0;
+    border-bottom: 1px dotted var(--border-color); /* Per i puntini puoi usare border-bottom dotted */
+    flex-wrap: wrap; /* Permette alla descrizione di andare sotto */
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.item-name {
+    font-weight: 700;
+    font-size: 1.1em;
+    flex-grow: 1;
+}
+
+.item-price {
+    font-weight: 700;
+    font-size: 1.1em;
+    color: var(--primary-red);
+    margin-left: 10px;
+}
+
+.item-description {
+    font-size: 0.9em;
+    color: var(--text-light);
+    flex-basis: 100%; /* Fa sì che la descrizione vada su una nuova riga e occupi il 100% */
+    margin-top: 5px; /* Spazio tra prezzo/nome e descrizione */
+}.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/pizza-hero.jpeg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 40px 0;
+    text-align: center;
+    background: var(--bg-light);
+}
+
+.contact-section h3 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: var(--primary-red);
+}
+
+.contact-section p, .contact-section ul {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.contact-section ul li {
+    margin-bottom: 5px;
+}
+
+.map-placeholder {
+    margin-top: 30px;
+    background: var(--border-color);
+    min-height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-placeholder iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+
+/* Footer */
+footer {
+    background: var(--text-dark);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .menu-section h3, .contact-section h3 {
+        font-size: 2em;
+    }
+
+    .menu-category h4 {
+        font-size: 1.5em;
+    }
+}
+/* --- CORREZIONE: LOGO IMMAGINE E DIMENSIONI --- */
+.header-logo-img {
+    max-height: 50px; /* Imposta l'altezza massima per il logo */
+    width: auto;     /* Mantieni le proporzioni */
+    vertical-align: middle; 
+}
+/* Inoltre, potresti aver bisogno di resettare il font-size sull'h1 se è rimasto enorme */
+header .logo {
+    font-size: 1em; /* Rendi l'h1 piccolo, dato che ora contiene solo l'immagine */
+}
+body {
+    background-color: pink !important; /* TEST: Forza lo sfondo rosa */
+    border: 5px solid red !important; /* TEST: Forza un bordo rosso */
+    /* Il resto del tuo codice body... */
+}
