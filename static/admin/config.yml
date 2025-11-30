@@ -1,10 +1,10 @@
 backend:
   name: git-gateway
-  branch: main # Utilizzeremo il branch 'main' per la pubblicazione su Netlify
+  branch: main 
 
-publish_mode: editorial_workflow # Permette di approvare le modifiche prima di pubblicare
-media_folder: "static/images" # Dove verranno caricate le nuove immagini
-public_folder: "/images" # Il percorso per le immagini nel sito finale
+publish_mode: editorial_workflow
+media_folder: "static/images"
+public_folder: "/images"
 
 collections:
   - name: "configurazione"
@@ -12,24 +12,28 @@ collections:
     files:
       - label: "Homepage e Contatti"
         name: "settings"
-        file: "data/settings.json" # Dove Hugo troverà i dati
+        file: "data/settings.json"
 
         fields:
-          # CAMPO TITOLO DEL SITO
-          - label: "Titolo Principale"
-            name: "site_title"
+          # NUOVI CAMPI HOMEPAGE
+          - label: "Headline Principale"
+            name: "homepage_title"
             widget: "string"
-            default: "Gusteau Pizzeria"
-            hint: "Il titolo che appare nella scheda del browser"
+            default: "Benvenuti da Gusteau"
 
-          # CAMPO SEZIONE CHI SIAMO
+          - label: "Slogan / Sottotitolo"
+            name: "homepage_subtitle"
+            widget: "string"
+            default: "La Pizzeria che porta il gusto del mare e della tradizione sulla tua tavola."
+
+          # CAMPO CHI SIAMO
           - label: "Storia e Missione"
             name: "about_content"
-            widget: "markdown" # Permette al ristoratore di usare grassetto e liste
+            widget: "markdown"
             default: "Siamo una pizzeria nata dalla passione... (TESTO ESEMPIO)"
             hint: "Il testo che descrive il locale nella sezione Chi Siamo."
 
-          # CAMPO CONTATTI
+          # CAMPI CONTATTI
           - label: "Indirizzo Fisico"
             name: "address"
             widget: "string"
@@ -38,3 +42,9 @@ collections:
             name: "phone"
             widget: "string"
             default: "+39 070 1234567"
+
+          # NUOVO CAMPO FOOTER
+          - label: "Testo Footer (Copyright)"
+            name: "footer_text"
+            widget: "string"
+            default: "© 2024 Gusteau Pizzeria. Tutti i diritti riservati."
