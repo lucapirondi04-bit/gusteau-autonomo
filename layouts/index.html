@@ -26,8 +26,8 @@
 
     <section id="home" class="hero">
         <div class="container">
-            <h2>Benvenuti da Gusteau</h2>
-            <p>La Pizzeria che porta il gusto del mare e della tradizione sulla tua tavola.</p>
+            <h2>{{ with .Site.Data.settings.homepage_title }}{{ . }}{{ end }}</h2>
+            <p>{{ with .Site.Data.settings.homepage_subtitle }}{{ . }}{{ end }}</p>
             <a href="#menu" class="button">Scopri il Menù</a>
         </div>
     </section>
@@ -109,7 +109,7 @@
 
     <footer>
         <div class="container">
-            <p>© 2024 Gusteau Pizzeria. Tutti i diritti riservati.</p>
+            <p>{{ with .Site.Data.settings.footer_text }}{{ . }}{{ end }}</p>
         </div>
     </footer>
 </body>
