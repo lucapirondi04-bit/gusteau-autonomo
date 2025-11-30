@@ -35,8 +35,10 @@
         <div class="container">
             <h3>La Nostra Storia</h3>
             <div class="about-content">
-    {{ with .Site.Data.settings.about_content }}
-        {{ . | markdownify }}
+    {{ range .Site.Data.settings }}
+        {{ with .about_content }}
+            {{ . | markdownify }}
+        {{ end }}
     {{ end }}
 </div>
             <div class="about-image-placeholder"></div>
