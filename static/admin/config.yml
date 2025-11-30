@@ -48,6 +48,12 @@ collections:
             name: "public_email"
             widget: "string"
             default: "info@gusteau.it" # Email di default
+
+            # NUOVO CAMPO ORARI
+          - label: "Orari di Apertura"
+            name: "opening_hours"
+            widget: "markdown"
+            default: "Lunedì - Sabato: **19:00 - 23:00**\nDomenica: **Chiuso**"
             
 # --- NUOVO CAMPO MENU DINAMICO ---
           - label: "Menu Pizze"
