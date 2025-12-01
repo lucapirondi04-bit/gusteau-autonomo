@@ -5,9 +5,12 @@
   "homepage_title": "Benvenuti da LucaPizza",
   "opening_hours": "Temporaneamente Chiuso :(",
   "homepage_subtitle": "La pizzeria che porta pizze al tavolo",
+  "about_image": "/images/interno-locale-pizzeria.jpeg",
   "phone": "+39 1234567890",
+  "google_map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d154868.4018514687!2d9.183308025858237!3d39.02156221394882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sit!2sit!4v1764579488240!5m2!1sit!2sit\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
   "footer_text": "tutti i diritti riservati a LucaPizza, non permettetevi a rubarli",
   "address": "Via Roma, 123, Cagliari",
+  "hero_image": "/images/pizza-hero.jpeg",
   "pizza_menu": [
     {
       "category_name": "CLASSICHE",
@@ -34,5 +37,6 @@
         }
       ]
     }
-  ]
+  ],
+  "header_logo": "/images/logo-lucapizza.png"
 }
