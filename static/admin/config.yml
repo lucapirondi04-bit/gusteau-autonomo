@@ -43,19 +43,43 @@ collections:
             widget: "string"
             default: "+39 070 1234567"
 
-# NUOVO CAMPO MAIL
+          # NUOVO CAMPO MAIL
           - label: "Indirizzo Email Pubblico"
             name: "public_email"
             widget: "string"
             default: "info@gusteau.it" # Email di default
 
-            # NUOVO CAMPO ORARI
+          # CAMPO IMMAGINE SFONDO HOME
+          - label: "Immagine Sfondo Homepage"
+            name: "hero_image"
+            widget: "image"
+            hint: "Carica l'immagine principale del sito. Raccomandata una foto di alta qualità."
+
+          # CAMPO IMMAGINE LOGO
+          - label: "Immagine Logo (Header)"
+            name: "header_logo"
+            widget: "image"
+            hint: "Carica il file del logo. Verrà visualizzato in alto a sinistra."
+
+          # CAMPO IMMAGINE STORIA/CHI SIAMO
+          - label: "Immagine Sezione Chi Siamo"
+            name: "about_image"
+            widget: "image"
+            hint: "Carica una foto per la sezione 'La Nostra Storia'."
+          
+          # CAMPO GOOGLE MAPS
+          - label: "Codice Mappa Google (iframe)"
+            name: "google_map_embed"
+            widget: "string"
+            hint: "Inserisci qui il codice embed di Google Maps (iframe) per la posizione esatta."
+          
+          # NUOVO CAMPO ORARI
           - label: "Orari di Apertura"
             name: "opening_hours"
             widget: "markdown"
             default: "Lunedì - Sabato: **19:00 - 23:00**\nDomenica: **Chiuso**"
-            
-# --- NUOVO CAMPO MENU DINAMICO ---
+
+          # --- NUOVO CAMPO MENU DINAMICO ---
           - label: "Menu Pizze"
             name: "pizza_menu"
             widget: "list" 
