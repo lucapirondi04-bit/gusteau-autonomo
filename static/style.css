@@ -171,14 +171,17 @@ header nav a:hover {
 
 /* Stile per il placeholder delle immagini (lo sfondo o il collage) */
 .about-image-placeholder {
-    height: 350px; /* Aumentiamo leggermente l'altezza per mostrare più immagine */
     margin-top: 20px;
-    background-image: url('./images/interno-locale-pizzeria.jpeg'); /* IL TUO COLLEGAMENTO ALL'IMMAGINE */
-    background-size: cover;       /* L'immagine coprirà tutto lo spazio */
-    background-position: center;  /* L'immagine sarà centrata */
-    background-repeat: no-repeat; /* Evita che l'immagine si ripeta */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Aggiunge una leggera ombra per farla risaltare */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    overflow: hidden; /* Rende gli angoli arrotondati visibili sull'immagine */
+}
+
+/* --- REGOLA PER RENDERE L'IMMAGINE PROPORZIONALE --- */
+.about-image-placeholder img.about-image {
+    width: 100%; /* Forza l'immagine a occupare tutta la larghezza del contenitore */
+    height: auto; /* <--- QUESTO MANTIENE LE PROPORZIONI! */
+    display: block;
 }
 
 /* Media Query (Assicurati che sia responsive) */
